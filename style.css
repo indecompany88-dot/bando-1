@@ -1,0 +1,60 @@
+/* Custom styles for Bando Workspace PBN Site */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Primary Color Definition */
+:root {
+    --primary-color: #dd5828;
+}
+
+/* Custom button states */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c4471b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(221, 88, 40, 0.3);
+}
+
+/* Accordion transition */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.faq-item .faq-toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Modal styles */
+.modal-overlay {
+    backdrop-filter: blur(4px);
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.modal-open .modal-content {
+    transform: scale(1);
+}
