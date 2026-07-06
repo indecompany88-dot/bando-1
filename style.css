@@ -25,15 +25,17 @@ html {
 
 /* Accordion transition */
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    grid-template-rows: 1fr;
+}
+
+.faq-answer-content {
+    overflow: hidden;
 }
 
 .faq-item .faq-toggle-icon {

@@ -57,15 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close all items
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
-                const answer = otherItem.querySelector('.faq-answer');
-                answer.style.maxHeight = null;
             });
 
             // Toggle clicked item
             if (!isActive) {
                 item.classList.add('active');
-                const answer = item.querySelector('.faq-answer');
-                answer.style.maxHeight = answer.scrollHeight + 'px';
             }
         });
     });
